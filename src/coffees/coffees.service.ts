@@ -15,14 +15,13 @@ export class CoffeesService {
         return this.coffees;
     }
     findOne(id: string) {
-        throw 'A random error'
+        // throw 'A random error'
         const coffee = this.coffees.find(item => item.id === +id);
         if (!coffee) {
             throw new NotFoundException(`Coffee #${id} not found`)
         }
         return coffee;
     }
-
     create(createCoffeeDto: any) {
         this.coffees.push(createCoffeeDto);
     }
