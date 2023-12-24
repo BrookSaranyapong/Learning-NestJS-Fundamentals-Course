@@ -6,6 +6,9 @@ export class Coffee {
     @PrimaryGeneratedColumn()
     id: number;
 
+    // @Column()
+    // title: string;
+
     @Column()
     name: string;
 
