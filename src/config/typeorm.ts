@@ -9,7 +9,7 @@ export const connectionSource = new DataSource({
     database: "postgres",
     entities: ["dist/**/*.entity{.ts,.js}"],
     migrations: ["dist/migrations/*{.ts,.js}"],
-    synchronize: true,
+    synchronize: false,
 });
 
 // import { DataSource, DataSourceOptions } from "typeorm";
