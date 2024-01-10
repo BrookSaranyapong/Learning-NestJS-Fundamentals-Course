@@ -9,7 +9,10 @@ import { CoffeesModule } from './coffees/coffees.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      // ignoreEnvFile:true, ignore ไม่เอาไฟล์ Env
+      // envFilePath: '.environment', Choose File env เลือกไฟล์เอง
+    }),
     CoffeesModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
