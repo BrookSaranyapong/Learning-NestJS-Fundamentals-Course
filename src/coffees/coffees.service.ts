@@ -8,7 +8,7 @@ import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 import { Coffee } from './entities/coffee.entity';
 import { Flavor } from './entities/flavor.entity';
 import { Event } from 'src/events/entities/event.entity';
-import coffeesConfig from './dto/coffees.config';
+import coffeesConfig from './config/coffees.config';
 
 @Injectable()
 export class CoffeesService {
