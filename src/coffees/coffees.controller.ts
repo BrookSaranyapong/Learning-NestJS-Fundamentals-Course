@@ -4,10 +4,10 @@ import {
   Delete,
   Get,
   Param,
+  ParseIntPipe,
   Patch,
   Post,
   Query,
-  SetMetadata,
   ValidationPipe,
 } from '@nestjs/common';
 import { CoffeesService } from './coffees.service';
@@ -28,8 +28,8 @@ export class CoffeesController {
     return this.coffeesService.findAll(paginationQuery);
   }
   @Get(':id')
-  findOne(@Param('id') id: number) {
-    console.log(typeof id);
+  findOne(@Param('id', ParseIntPipe) id: number) {
+    console.log(id);
     return this.coffeesService.findOne('' + id);
   }
   @Post()
