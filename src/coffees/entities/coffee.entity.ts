@@ -9,6 +9,9 @@ import { Flavor } from './flavor.entity';
 
 @Entity() // sql table === "coffee"
 export class Coffee {
+  remove() {
+    throw new Error('Method not implemented.');
+  }
   @PrimaryGeneratedColumn()
   id: number;
 
