@@ -8,6 +8,7 @@ import { CoffeeRatingModule } from './coffee-rating/coffee-rating.module';
 import { CoffeesModule } from './coffees/coffees.module';
 import { CommonModule } from './common/common.module';
 import appConfig from './config/app.config';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import appConfig from './config/app.config';
     ConfigModule.forRoot({
       load: [appConfig],
     }),
+    MongooseModule.forRoot('mongodb://localhost:27018/nest-course'),
     CoffeesModule,
     CoffeeRatingModule,
     DatabaseModule,
